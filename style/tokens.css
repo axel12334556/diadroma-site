@@ -1,36 +1,40 @@
 /* Charte Diadroma : « itinéraire ». Toutes les couleurs et mesures passent par ces variables. */
 :root {
   color-scheme: light dark;
-  --marine: #0F1E3C;          /* bandeaux, texte principal en clair */
-  --marine-2: #14264A;        /* surfaces sur fond marine */
-  --papier: #F5F7FA;          /* fond de page en clair */
-  --blanc: #FFFFFF;
-  --menthe: #1FB58F;          /* signal « vérifié » : fonds et graphismes ; en texte, seulement sur marine */
+  --marine: #0F1E3C;          /* boutons, symbole */
+  --marine-survol: #1B3263;
+  --fond: #FBFBFD;            /* fond de page */
+  --fond-2: #F5F5F7;          /* aplats et sections alternées */
+  --texte: #1D1D1F;
+  --texte-doux: #6E6E73;
+  --trait: #D2D2D7;
+  --lien: #0066CC;
+  --menthe: #1FB58F;          /* signal « vérifié » : graphismes ; en texte, seulement sur fond sombre */
   --menthe-texte: #0B7A5E;    /* texte vert sur fond clair */
-  --ambre: #F5A524;           /* signal « en attente » */
-  --texte: #0F1E3C;
-  --texte-doux: #4A5A78;
-  --lien: #0B5CAD;
-  --trait: #CDD6E3;
-  --surface: #FFFFFF;
-  --band: #0F1E3C;
-  --band-texte: #FFFFFF;
-  --band-doux: #B8C4DC;
-  --police-titre: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --police-texte: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --ambre: #E8920A;           /* signal « en attente » */
+  --nuit: #1D1D1F;            /* bande sombre */
+  --nuit-texte: #F5F5F7;
+  --nuit-doux: #A1A1A6;
+  --nav-fond: rgba(251, 251, 253, .82);
+  --police-titre: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --police-texte: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --police-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  --rayon: 14px;
-  --largeur: 960px;
+  --rayon: 24px;
+  --largeur: 980px;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --papier: #0A1428;
-    --surface: #14264A;
-    --band: #07101F;
-    --texte: #E8EEF8;
-    --texte-doux: #A9B7D0;
-    --lien: #7DB4F2;
-    --trait: #26395F;
+    --fond: #000000;
+    --fond-2: #161617;
+    --texte: #F5F5F7;
+    --texte-doux: #A1A1A6;
+    --trait: #3A3A3C;
+    --lien: #2997FF;
     --menthe-texte: #2BD0A5;
+    --ambre: #F5A524;
+    --nuit: #1D1D1F;
+    --nav-fond: rgba(0, 0, 0, .78);
+    --marine: #F5F5F7;
+    --marine-survol: #FFFFFF;
   }
 }

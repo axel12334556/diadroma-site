@@ -11,26 +11,30 @@ Le nom s'écrit « Diadroma », en titre gras (police des titres), à droite du 
 
 ## Couleurs (variables dans `style/tokens.css`)
 
-| Rôle | Valeur | Usage |
+| Rôle | Valeur (clair) | Usage |
 |---|---|---|
-| Marine | `#0F1E3C` | bandeaux, texte principal en clair |
-| Papier | `#F5F7FA` | fond de page en clair |
-| Menthe | `#1FB58F` | signal « vérifié », stations d'arrivée, boutons principaux |
-| Ambre | `#F5A524` | signal « en attente » |
-| Texte doux | `#4A5A78` | texte secondaire |
-| Lien | `#0B5CAD` | liens sur fond clair |
+| Fond | `#FBFBFD` | fond de page |
+| Aplat | `#F5F5F7` | sections alternées, tuiles |
+| Texte | `#1D1D1F` | texte principal |
+| Texte doux | `#6E6E73` | texte secondaire |
+| Marine | `#0F1E3C` | boutons, symbole |
+| Menthe | `#1FB58F` | signal « vérifié », station d'arrivée |
+| Ambre | `#E8920A` | signal « en attente » |
+| Nuit | `#1D1D1F` | une seule bande sombre : le message essentiel |
+| Lien | `#0066CC` | liens |
 
-Règles : un seul accent fort (menthe) ; l'ambre uniquement pour « en attente » ; **la menthe vive ne sert pas de texte sur fond clair**
-(utiliser `--menthe-texte` `#0B7A5E`). Contrastes mesurés ≥ 4,5:1 pour tout texte, en clair comme en sombre (thème sombre automatique).
+Règles : beaucoup d'espace et de blanc ; un seul accent (menthe), jamais en texte sur fond clair (utiliser `--menthe-texte`
+`#0B7A5E`) ; l'ambre uniquement pour « en attente » ; pas de dégradés, pas de lueurs, pas d'ombres appuyées ; une seule bande sombre par page.
+Le thème sombre suit le réglage du visiteur. Contrastes mesurés ≥ 4,5:1 pour les textes.
 
 ## Typographie
 
 Polices du système uniquement (aucune police externe, pour la vitesse, la confidentialité et la politique de sécurité du site) :
-titres gras en `Avenir Next` / `Segoe UI`, texte en police système, **empreintes et identifiants en monospace**.
+très grands titres gras à interlettrage serré (police système : SF Pro sur Apple, Segoe UI ou Roboto ailleurs), texte en police système, **empreintes et identifiants en monospace**.
 
 ## Motifs
 
-- Lignes épaisses, angles à 45° et 90°, extrémités arrondies ; stations en cercles (creux = étape, plein vert = arrivée).
+- Lignes fines et régulières, stations en cercles (creux = étape, plein vert = arrivée). Un titre = une idée = une section.
 - Un composant central : `.route` (itinéraire horizontal sur grand écran, vertical sur téléphone).
 - Les niveaux d'une preuve se montrent comme des stations : creux gris = étape, ambre = en attente, plein vert = vérifié.
 
