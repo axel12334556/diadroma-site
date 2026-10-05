@@ -1,0 +1,36 @@
+/* Charte Diadroma : « itinéraire ». Toutes les couleurs et mesures passent par ces variables. */
+:root {
+  color-scheme: light dark;
+  --marine: #0F1E3C;          /* bandeaux, texte principal en clair */
+  --marine-2: #14264A;        /* surfaces sur fond marine */
+  --papier: #F5F7FA;          /* fond de page en clair */
+  --blanc: #FFFFFF;
+  --menthe: #1FB58F;          /* signal « vérifié » : fonds et graphismes ; en texte, seulement sur marine */
+  --menthe-texte: #0B7A5E;    /* texte vert sur fond clair */
+  --ambre: #F5A524;           /* signal « en attente » */
+  --texte: #0F1E3C;
+  --texte-doux: #4A5A78;
+  --lien: #0B5CAD;
+  --trait: #CDD6E3;
+  --surface: #FFFFFF;
+  --band: #0F1E3C;
+  --band-texte: #FFFFFF;
+  --band-doux: #B8C4DC;
+  --police-titre: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --police-texte: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --police-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --rayon: 14px;
+  --largeur: 960px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --papier: #0A1428;
+    --surface: #14264A;
+    --band: #07101F;
+    --texte: #E8EEF8;
+    --texte-doux: #A9B7D0;
+    --lien: #7DB4F2;
+    --trait: #26395F;
+    --menthe-texte: #2BD0A5;
+  }
+}
