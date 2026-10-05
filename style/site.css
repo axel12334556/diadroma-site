@@ -1,0 +1,23 @@
+:root { color-scheme: light; font-family: system-ui, -apple-system, sans-serif; color: #19243b; background: #f5f7fa; }
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.65; }
+a { color: #1759a6; } a:hover { color: #103f77; }
+header, main, footer { max-width: 860px; margin: 0 auto; padding: 0 1.25rem; }
+header { display: flex; justify-content: space-between; align-items: center; padding-top: 1.25rem; padding-bottom: 1.25rem; }
+.brand { font-weight: 700; font-size: 1.2rem; color: #19243b; text-decoration: none; }
+nav a { margin-left: 1.25rem; font-size: .95rem; }
+.hero { padding: 3.5rem 0 2rem; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; margin: 0 0 1rem; }
+.hero p { font-size: 1.15rem; color: #3b4a63; max-width: 40rem; }
+.cta { display: inline-block; margin-top: 1rem; padding: .7rem 1.3rem; color: white; background: #1759a6; border-radius: 8px; text-decoration: none; }
+.cta:hover { background: #103f77; color: white; }
+.cta.secondary { background: white; color: #1759a6; border: 1px solid #1759a6; margin-left: .6rem; }
+section { padding: 1.5rem 0; }
+h2 { font-size: 1.4rem; margin: 0 0 .75rem; }
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.card { background: white; border-radius: 12px; padding: 1.1rem 1.25rem; box-shadow: 0 4px 18px #1b335012; }
+.card h3 { margin: 0 0 .4rem; font-size: 1.05rem; }
+.card p { margin: 0; font-size: .95rem; color: #3b4a63; }
+.notice { padding: .9rem 1.1rem; background: #fff8e6; border-left: 4px solid #9a6d12; border-radius: 4px; font-size: .95rem; }
+ol.steps { padding-left: 1.2rem; } ol.steps li { margin: .5rem 0; }
+footer { padding-top: 2rem; padding-bottom: 3rem; font-size: .88rem; color: #536178; }
