@@ -4,51 +4,95 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
-<title>Diadroma — preuves d'intégrité pour vos données de conformité</title>
+<title>Diadroma — la preuve, sans la donnée</title>
 <meta name="description" content="Diadroma permet de prouver l'intégrité et la date de vos données de conformité industrielle (nomenclatures, passeport numérique de produit) sans jamais les révéler.">
+<meta name="theme-color" content="#FBFBFD">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style/tokens.css">
 <link rel="stylesheet" href="style/site.css">
 </head>
 <body>
-<header>
-  <a class="brand" href="./">Diadroma</a>
-  <nav><a href="#principe">Principe</a> <a href="#auditeur">Auditeurs</a> <a href="#pilote">Pilote</a></nav>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="28" height="28">Diadroma</a>
+    <nav aria-label="Navigation principale"><a href="#principe">Principe</a> <a href="#niveaux">Niveaux de preuve</a> <a href="#auditeurs">Auditeurs</a> <a href="#pilote">Pilote</a></nav>
+  </div>
 </header>
 <main>
-  <section class="hero">
-    <h1>Prouvez l'intégrité de vos données de conformité, sans les révéler.</h1>
-    <p>Diadroma (plateforme ChainDBoM) scelle la nomenclature de vos produits sur votre poste, puis ancre son empreinte dans la blockchain Bitcoin. Un auditeur vérifie la preuve de son côté, sans jamais voir le contenu.</p>
-    <a class="cta" href="#pilote">Demander un accès au pilote</a>
-    <a class="cta secondary" href="https://axel12334556.github.io/diadroma-verify/">Vérifier une preuve</a>
-  </section>
-
-  <section id="principe">
-    <h2>Un principe simple : vos données restent chez vous</h2>
-    <div class="grid">
-      <div class="card"><h3>Vous gardez le clair et les clés</h3><p>Le chiffrement et la signature se font sur votre poste. Diadroma ne reçoit que des identifiants, des empreintes, une signature et une enveloppe chiffrée.</p></div>
-      <div class="card"><h3>Une preuve datée et publique</h3><p>Les dépôts sont regroupés en lots et ancrés dans Bitcoin. La preuve établit qu'une empreinte signée existait au plus tard à la date du bloc.</p></div>
-      <div class="card"><h3>Vérifiable sans nous</h3><p>Une preuve exportée se contrôle hors ligne avec un script autonome ou dans votre navigateur, sans dépendre d'un serveur de Diadroma.</p></div>
+  <div class="hero">
+    <div class="wrap">
+      <h1>La preuve, sans la donnée.</h1>
+      <p class="lead">Diadroma scelle vos nomenclatures sur votre poste et ancre leur empreinte dans Bitcoin. Un auditeur vérifie le trajet, sans jamais voir le contenu.</p>
+      <div class="actions">
+        <a class="btn" href="#pilote">Demander un accès</a>
+        <a class="lien-fleche" href="https://axel12334556.github.io/diadroma-verify/">Vérifier une preuve</a>
+      </div>
+      <ol class="route" aria-label="Le trajet d'une preuve en quatre étapes">
+        <li><h3>Votre poste</h3><p>Vous scellez : empreinte, signature, chiffrement. Rien en clair ne part.</p></li>
+        <li><h3>Dépôt</h3><p>Diadroma reçoit des empreintes, une signature et une enveloppe chiffrée.</p></li>
+        <li><h3>Lot</h3><p>Les dépôts sont regroupés et résumés par une seule empreinte.</p></li>
+        <li class="arrivee"><h3>Bitcoin</h3><p>Le lot est ancré : une date publique, vérifiable par tous.</p></li>
+      </ol>
     </div>
-    <p class="notice"><strong>Aucune clé de récupération.</strong> Diadroma ne détient aucune de vos clés. Si vous les perdez, vos enveloppes chiffrées deviennent illisibles ; les preuves d'intégrité restent, elles, vérifiables. C'est une condition essentielle d'usage.</p>
+  </div>
+
+  <section id="principe" class="alt">
+    <div class="wrap">
+      <h2>Vos données restent chez vous.</h2>
+      <p class="sous-titre">Le chiffrement et la signature se font sur votre poste, avant tout envoi.</p>
+      <div class="tuiles">
+        <div class="tuile"><h3>Vous gardez le clair et les clés.</h3><p>Diadroma ne reçoit que des identifiants, des empreintes, une signature et une enveloppe chiffrée.</p></div>
+        <div class="tuile"><h3>Une date publique.</h3><p>La preuve établit qu'une empreinte signée existait au plus tard à la date du bloc Bitcoin qui l'atteste.</p></div>
+        <div class="tuile"><h3>Vérifiable sans nous.</h3><p>Une preuve exportée se contrôle hors ligne, avec un script autonome ou dans votre navigateur.</p></div>
+      </div>
+    </div>
   </section>
 
-  <section id="auditeur">
-    <h2>Pour les auditeurs</h2>
-    <ol class="steps">
-      <li>Le client vous remet une preuve ancrée (un fichier JSON) et l'empreinte de sa clé de signature, publiée sur un canal qu'il contrôle.</li>
-      <li>Vous déposez la preuve dans le <a href="https://axel12334556.github.io/diadroma-verify/">vérificateur</a>. Tout se calcule dans votre navigateur ; la lecture du bloc Bitcoin est optionnelle et signalée.</li>
-      <li>Le résultat indique le niveau atteint : intégrité, engagement OpenTimestamps, attestation Bitcoin, bloc confirmé.</li>
-    </ol>
-    <p>Une preuve établit qu'une empreinte a été signée par une clé donnée et ancrée à une date. Elle n'établit pas la véracité du contenu métier.</p>
+  <section class="nuit">
+    <div class="wrap">
+      <h2>Aucune clé de récupération.</h2>
+      <p>Diadroma ne détient aucune de vos clés. <strong>Si vous les perdez, vos enveloppes chiffrées deviennent illisibles</strong> ; les preuves d'intégrité restent, elles, vérifiables. C'est une condition essentielle d'usage.</p>
+    </div>
   </section>
 
-  <section id="pilote">
-    <h2>Pilote en cours</h2>
-    <p>Diadroma est en phase pilote, sur invitation, sans engagement de niveau de service. Le service n'a pas encore fait l'objet d'une revue de sécurité indépendante. Les conditions d'usage du pilote sont en cours de validation.</p>
-    <p>Pour demander un accès : <a href="mailto:contact@diadroma.fr">contact@diadroma.fr</a></p>
+  <section id="niveaux">
+    <div class="wrap">
+      <h2>Une preuve avance étape par étape.</h2>
+      <p class="sous-titre">Le vérificateur indique l'étape atteinte, calculée à partir de la preuve elle-même.</p>
+      <ol class="niveaux">
+        <li><strong>Intégrité</strong><span>La signature, le chaînage et l'inclusion dans le lot sont cohérents.</span></li>
+        <li class="attente"><strong>Engagement OpenTimestamps<span class="etat">en attente</span></strong><span>L'empreinte du lot est engagée ; l'attestation Bitcoin peut demander quelques heures.</span></li>
+        <li><strong>Attestation Bitcoin</strong><span>La preuve contient une attestation rattachée à un bloc Bitcoin.</span></li>
+        <li class="ok"><strong>Bloc confirmé<span class="etat">vérifié</span></strong><span>L'attestation correspond à la racine du bloc, lue chez un explorateur ou fournie par l'auditeur.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="auditeurs" class="alt">
+    <div class="wrap">
+      <h2>Pour les auditeurs.</h2>
+      <div class="colonnes">
+        <div><h3>Recevez.</h3><p>Le client vous remet une preuve ancrée (un fichier JSON) et l'empreinte de sa clé de signature, publiée sur un canal qu'il contrôle.</p></div>
+        <div><h3>Déposez.</h3><p>Dans le <a href="https://axel12334556.github.io/diadroma-verify/">vérificateur</a>, tout se calcule dans votre navigateur. La lecture du bloc Bitcoin est optionnelle et signalée.</p></div>
+        <div><h3>Lisez.</h3><p>Le résultat indique le niveau atteint, et si la clé de signature est authentifiée.</p></div>
+      </div>
+      <p class="limite">Une preuve établit qu'une empreinte a été signée par une clé donnée et ancrée à une date. Elle n'établit pas la véracité du contenu métier.</p>
+    </div>
+  </section>
+
+  <section id="pilote" class="centre">
+    <div class="wrap">
+      <h2>Pilote sur invitation.</h2>
+      <p>Diadroma est en phase pilote, sans engagement de niveau de service. Le service n'a pas encore fait l'objet d'une revue de sécurité indépendante, et les conditions d'usage sont en cours de validation.</p>
+      <p class="contact"><a href="mailto:contact@diadroma.fr">contact@diadroma.fr</a></p>
+    </div>
   </section>
 </main>
 <footer>
-  <p>Diadroma — plateforme ChainDBoM. Pilote expérimental ; aucune donnée en clair n'est jamais transmise au service. <a href="mentions-legales.html">Mentions légales</a>.</p>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="24" height="24">Diadroma</a>
+    <p>Plateforme ChainDBoM. Pilote expérimental ; aucune donnée en clair n'est jamais transmise au service. <a href="mentions-legales.html">Mentions légales</a>.</p>
+  </div>
 </footer>
 </body>
 </html>

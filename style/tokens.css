@@ -1,0 +1,40 @@
+/* Charte Diadroma : « itinéraire ». Toutes les couleurs et mesures passent par ces variables. */
+:root {
+  color-scheme: light dark;
+  --marine: #0F1E3C;          /* boutons, symbole */
+  --marine-survol: #1B3263;
+  --fond: #FBFBFD;            /* fond de page */
+  --fond-2: #F5F5F7;          /* aplats et sections alternées */
+  --texte: #1D1D1F;
+  --texte-doux: #6E6E73;
+  --trait: #D2D2D7;
+  --lien: #0066CC;
+  --menthe: #1FB58F;          /* signal « vérifié » : graphismes ; en texte, seulement sur fond sombre */
+  --menthe-texte: #0B7A5E;    /* texte vert sur fond clair */
+  --ambre: #E8920A;           /* signal « en attente » */
+  --nuit: #1D1D1F;            /* bande sombre */
+  --nuit-texte: #F5F5F7;
+  --nuit-doux: #A1A1A6;
+  --nav-fond: rgba(251, 251, 253, .82);
+  --police-titre: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --police-texte: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --police-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --rayon: 24px;
+  --largeur: 980px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #000000;
+    --fond-2: #161617;
+    --texte: #F5F5F7;
+    --texte-doux: #A1A1A6;
+    --trait: #3A3A3C;
+    --lien: #2997FF;
+    --menthe-texte: #2BD0A5;
+    --ambre: #F5A524;
+    --nuit: #1D1D1F;
+    --nav-fond: rgba(0, 0, 0, .78);
+    --marine: #F5F5F7;
+    --marine-survol: #FFFFFF;
+  }
+}
