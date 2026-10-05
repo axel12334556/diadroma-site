@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Diadroma — la preuve, sans la donnée</title>
-<meta name="description" content="Diadroma permet de prouver l'intégrité et la date de vos données de conformité industrielle (nomenclatures, passeport numérique de produit) sans jamais les révéler.">
+<meta name="description" content="Diadroma prouve l'intégrité et la date des données qui alimentent votre passeport produit numérique (nomenclatures, batteries) sans jamais les révéler à l'auditeur.">
 <meta name="theme-color" content="#FBFBFD">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style/tokens.css">
@@ -15,7 +15,7 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="28" height="28">Diadroma</a>
-    <nav aria-label="Navigation principale"><a href="#principe">Principe</a> <a href="#niveaux">Niveaux de preuve</a> <a href="#auditeurs">Auditeurs</a> <a href="#pilote">Pilote</a></nav>
+    <nav aria-label="Navigation principale"><a href="#passeport">Passeport</a> <a href="#principe">Principe</a> <a href="#niveaux">Niveaux de preuve</a> <a href="#auditeurs">Auditeurs</a> <a href="#pilote">Pilote</a></nav>
   </div>
 </header>
 <main>
@@ -30,7 +30,7 @@
     </svg>
     <div class="wrap">
       <h1>La preuve, sans la donnée.</h1>
-      <p class="lead">Diadroma scelle vos nomenclatures sur votre poste et ancre leur empreinte dans Bitcoin. Un auditeur vérifie le trajet, sans jamais voir le contenu.</p>
+      <p class="lead">Diadroma scelle sur votre poste les données qui alimentent votre passeport produit numérique, puis prouve à un auditeur qu'elles n'ont pas changé, sans qu'il les voie.</p>
       <div class="actions">
         <a class="btn" href="#pilote">Demander un accès</a>
         <a class="lien-fleche" href="https://axel12334556.github.io/diadroma-verify/">Vérifier une preuve</a>
@@ -39,10 +39,39 @@
         <li><h3>Votre poste</h3><p>Vous scellez : empreinte, signature, chiffrement. Rien en clair ne part.</p></li>
         <li><h3>Dépôt</h3><p>Diadroma reçoit des empreintes, une signature et une enveloppe chiffrée.</p></li>
         <li><h3>Lot</h3><p>Les dépôts sont regroupés et résumés par une seule empreinte.</p></li>
-        <li class="arrivee"><h3>Bitcoin</h3><p>Le lot est ancré : une date publique, vérifiable par tous.</p></li>
+        <li class="arrivee"><h3>Date publique</h3><p>Le lot est ancré dans un registre public : une date vérifiable par tous, que nous ne pouvons pas modifier.</p></li>
       </ol>
     </div>
   </div>
+
+  <section id="passeport">
+    <div class="wrap">
+      <h2>Au service du passeport produit numérique.</h2>
+      <p class="sous-titre">Diadroma ne remplace pas votre système de passeport. Il ajoute une preuve d'intégrité et de date sur les données qui l'alimentent.</p>
+      <dl class="points">
+        <div class="point">
+          <dt><span class="repere">ESPR</span>Le cadre européen</dt>
+          <dd>
+            <p>Le règlement (UE) 2024/1781 crée le passeport produit numérique. Pour les batteries, il s'applique dès le <strong>18 février 2027</strong>.</p>
+            <details><summary>Quelles batteries ?</summary><p>Les batteries industrielles de plus de 2 kWh, de véhicules électriques et de moyens de transport légers (règlement (UE) 2023/1542).</p></details>
+          </dd>
+        </div>
+        <div class="point">
+          <dt><span class="repere">GS1</span>Les identifiants</dt>
+          <dd>
+            <p>Le passeport s'appuie sur un identifiant unique de produit et un QR code. Les normes GS1 (GTIN, GS1 Digital Link) en sont une référence.</p>
+            <p class="reserve">Le pilote ne rattache pas encore une preuve à un identifiant GS1 : c'est une piste de travail.</p>
+          </dd>
+        </div>
+        <div class="point">
+          <dt><span class="repere">Preuve</span>Notre rôle</dt>
+          <dd>
+            <p>Diadroma prouve l'intégrité et la date de ce que vous scellez. Ce n'est ni un système de passeport, ni un hébergeur de vos données, ni une garantie de conformité : l'exactitude des données reste de votre responsabilité.</p>
+          </dd>
+        </div>
+      </dl>
+    </div>
+  </section>
 
   <section id="principe" class="alt">
     <div class="wrap">
@@ -50,7 +79,7 @@
       <p class="sous-titre">Le chiffrement et la signature se font sur votre poste, avant tout envoi.</p>
       <div class="tuiles">
         <div class="tuile"><h3>Vous gardez le clair et les clés.</h3><p>Diadroma ne reçoit que des identifiants, des empreintes, une signature et une enveloppe chiffrée.</p></div>
-        <div class="tuile"><h3>Une date publique.</h3><p>La preuve établit qu'une empreinte signée existait au plus tard à la date du bloc Bitcoin qui l'atteste.</p></div>
+        <div class="tuile"><h3>Une date publique.</h3><p>La preuve établit qu'une empreinte signée existait au plus tard à une date, attestée par un registre public indépendant de Diadroma.</p></div>
         <div class="tuile"><h3>Vérifiable sans nous.</h3><p>Une preuve exportée se contrôle hors ligne, avec un script autonome ou dans votre navigateur.</p></div>
       </div>
     </div>
@@ -66,7 +95,7 @@
   <section id="niveaux">
     <div class="wrap">
       <h2>Une preuve avance étape par étape.</h2>
-      <p class="sous-titre">Le vérificateur indique l'étape atteinte, calculée à partir de la preuve elle-même.</p>
+      <p class="sous-titre">Le vérificateur indique l'étape atteinte, calculée à partir de la preuve elle-même. Pour la date, nous utilisons OpenTimestamps et la blockchain Bitcoin, simplement parce qu'aucun acteur ne peut la réécrire : aucune cryptomonnaie n'est achetée ni détenue.</p>
       <ol class="niveaux">
         <li><strong>Intégrité</strong><span>La signature, le chaînage et l'inclusion dans le lot sont cohérents.</span></li>
         <li class="attente"><strong>Engagement OpenTimestamps<span class="etat">en attente</span></strong><span>L'empreinte du lot est engagée ; l'attestation Bitcoin peut demander quelques heures.</span></li>

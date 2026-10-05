@@ -86,6 +86,25 @@ section.alt .tuile { background: var(--fond); }
 .niveaux li.ok .etat { color: var(--menthe-texte); }
 .niveaux li.attente .etat { color: var(--texte-doux); }
 
+/* Passeport : lignes à repère, lisibles, sans cartes compactes */
+.points { margin: 3rem auto 0; max-width: 860px; }
+.point { display: grid; gap: .75rem 3rem; grid-template-columns: 1fr; padding: 2.25rem 0; border-top: 1px solid var(--trait); }
+.point:last-child { border-bottom: 1px solid var(--trait); }
+.point dt { font-family: var(--police-titre); font-size: 1.05rem; font-weight: 600; letter-spacing: -.01em; }
+.point dt .repere { display: block; font-size: clamp(2.4rem, 7vw, 3.5rem); font-weight: 700; letter-spacing: -.03em; line-height: 1; margin-bottom: .5rem; color: var(--texte); }
+.point:nth-child(3) dt .repere { color: var(--menthe-texte); }
+.point dd { margin: 0; font-size: 1.15rem; line-height: 1.5; letter-spacing: -.01em; }
+.point dd p { margin: 0 0 .9rem; }
+.point dd p strong { font-weight: 600; }
+.point dd .reserve { font-size: .95rem; color: var(--texte-doux); }
+.point details { font-size: .98rem; color: var(--texte-doux); }
+.point summary { cursor: pointer; color: var(--lien); list-style: none; width: fit-content; }
+.point summary::-webkit-details-marker { display: none; }
+.point summary::after { content: " \203A"; display: inline-block; transition: transform .2s; }
+.point details[open] summary::after { transform: rotate(90deg); }
+.point details p { margin: .6rem 0 0; font-size: .98rem; }
+@media (min-width: 760px) { .point { grid-template-columns: 15rem 1fr; align-items: start; } }
+
 /* Auditeurs et pilote */
 .colonnes { display: grid; gap: 2.5rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 3rem; }
 .colonnes h3 { font-size: 1.3rem; margin-bottom: .5rem; }
