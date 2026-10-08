@@ -127,6 +127,12 @@ footer .brand img { width: 24px; height: 24px; }
 .texte-page p { color: var(--texte); }
 .notice { margin: 1rem 0; padding: .9rem 1.1rem; background: var(--fond-2); border-radius: 12px; color: var(--texte-doux); font-size: .95rem; }
 
+/* Page de la clé de reçus */
+.cle dt { margin-top: 1rem; font-weight: 600; }
+.cle dd { margin: .2rem 0 0; }
+.empreinte { display: block; overflow-wrap: anywhere; word-break: break-all; padding: .6rem .8rem; background: var(--fond-2); border-radius: 8px; }
+.texte-page pre { overflow-x: auto; padding: .8rem 1rem; background: var(--fond-2); border-radius: 8px; font-size: .85rem; }
+
 @media (max-width: 759px) {
   .hero { padding: 3.5rem 0 2rem; }
   section { padding: 3.5rem 0; }

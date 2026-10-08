@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>Clé de reçus du service — Diadroma</title>
+<meta name="description" content="Empreinte publique de la clé qui signe les reçus du service ChainDBoM, à comparer avec celle du contrat ou du courrier remis au client.">
+<meta name="theme-color" content="#FBFBFD">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style/tokens.css">
+<link rel="stylesheet" href="style/site.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="28" height="28">Diadroma</a>
+    <nav aria-label="Navigation principale"><a href="./">Accueil</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap texte-page">
+    <h1>Clé de reçus du service</h1>
+    <p class="notice">Pilote : cette page ne suffit pas à elle seule. Comparez toujours l'empreinte ci-dessous avec celle qui figure dans votre contrat ou le courrier qui vous a été remis. Si elles diffèrent, n'accordez aucune confiance aux reçus et contactez-nous.</p>
+    <h2>À quoi sert cette clé</h2>
+    <p>Quand vous déposez un enregistrement, le service peut vous renvoyer un <strong>reçu signé</strong> : il atteste que votre envoi a été accepté, avec son numéro de séquence et l'instant de réception. Un reçu ne se valide pas lui-même : il faut l'empreinte de la clé du service, obtenue par un autre canal que le serveur. Un reçu ne prouve ni la date Bitcoin, ni le contenu de vos données.</p>
+    <p>Pour contrôler un reçu, déposez-le dans le <a href="https://verify.diadroma.fr/">vérificateur</a> et saisissez l'empreinte dans le champ « Empreinte de la clé de reçus du service ».</p>
+    <h2>Clé en service</h2>
+    <dl class="cle">
+      <dt>Identifiant de clé</dt><dd><code>receipt-2026-10</code></dd>
+      <dt>Mise en service</dt><dd>8 octobre 2026</dd>
+      <dt>Empreinte (SHA-256 de la clé publique)</dt><dd><code class="empreinte">1862f1b1f7953d4753ceb717f19a6eda5e6b905cf6c69954e6f270c4463d02d9</code></dd>
+      <dt>Clé publique (Ed25519, hexadécimal)</dt><dd><code class="empreinte">40913e38a36b2591d972da26202de8ae224644061dcae58a87ade4dffd2772f9</code></dd>
+    </dl>
+    <h2>Vérifier l'empreinte vous-même</h2>
+    <p>L'empreinte est le SHA-256 des 32 octets de la clé publique. Sur un poste Mac ou Linux :</p>
+    <pre><code>printf '%s' 40913e38a36b2591d972da26202de8ae224644061dcae58a87ade4dffd2772f9 | xxd -r -p | shasum -a 256</code></pre>
+    <p>Le résultat doit être identique à l'empreinte affichée ci-dessus.</p>
+    <h2>Historique des clés</h2>
+    <p>Les empreintes des clés remplacées restent valides pour les reçus qu'elles ont signés et ne seront jamais retirées de cette liste. En cas de fuite d'une clé, la date de la fuite et la nouvelle empreinte seront publiées ici.</p>
+    <p>Aucune clé n'a été remplacée à ce jour.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="24" height="24">Diadroma</a>
+    <p>Plateforme ChainDBoM. Pilote expérimental. <a href="./">Retour à l'accueil</a> · <a href="mentions-legales.html">Mentions légales</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
