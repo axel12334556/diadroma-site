@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
 <title>Diadroma — la preuve, sans la donnée</title>
-<meta name="description" content="Diadroma prouve l'intégrité et la date des données qui alimentent votre passeport produit numérique (nomenclatures, batteries) sans jamais les révéler à l'auditeur.">
+<meta name="description" content="Diadroma permet à un industriel de prouver à son client ou à un auditeur qu'une nomenclature n'a pas changé depuis une date, sans la leur montrer ni nous la confier en clair.">
 <meta name="theme-color" content="#FBFBFD">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="style/tokens.css">
@@ -15,7 +15,7 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="./"><img src="assets/logo-mark.svg" alt="" width="28" height="28">Diadroma</a>
-    <nav aria-label="Navigation principale"><a href="#passeport">Passeport</a> <a href="#principe">Principe</a> <a href="#niveaux">Niveaux de preuve</a> <a href="#auditeurs">Auditeurs</a> <a href="#pilote">Pilote</a></nav>
+    <nav aria-label="Navigation principale"><a href="#pour-qui">Pour qui</a> <a href="#parcours">Le parcours</a> <a href="#limites">Les limites</a> <a href="#verifier">Vérifier</a> <a href="#pilote">Pilote</a></nav>
   </div>
 </header>
 <main>
@@ -30,9 +30,9 @@
     </svg>
     <div class="wrap">
       <h1>La preuve, sans la donnée.</h1>
-      <p class="lead">Diadroma scelle sur votre poste les données qui alimentent votre passeport produit numérique, puis prouve à un auditeur qu'elles n'ont pas changé, sans qu'il les voie.</p>
+      <p class="lead">Quand un client ou un auditeur demande si cette nomenclature était bien celle-ci à cette date, vous répondez aujourd'hui sur la foi de vos journaux. Diadroma vous permet de le prouver, sans lui montrer la nomenclature et sans nous la confier en clair.</p>
       <div class="actions">
-        <a class="btn" href="#pilote">Demander un accès</a>
+        <a class="btn" href="#pilote">Demander un échange</a>
         <a class="lien-fleche" href="https://verify.diadroma.fr/">Vérifier une preuve</a>
       </div>
       <ol class="route" aria-label="Le trajet d'une preuve en quatre étapes">
@@ -44,10 +44,81 @@
     </div>
   </div>
 
-  <section id="passeport">
+  <section id="pour-qui">
     <div class="wrap">
-      <h2>Au service du passeport produit numérique.</h2>
-      <p class="sous-titre">Diadroma ne remplace pas votre système de passeport. Il ajoute une preuve d'intégrité et de date sur les données qui l'alimentent.</p>
+      <h2>Pour ceux qui prouvent, ceux qui exigent, ceux qui vérifient.</h2>
+      <p class="sous-titre">Le même fichier de preuve sert à tous, sans que personne n'ait à nous faire confiance.</p>
+      <div class="tuiles deux">
+        <div class="tuile"><h3>Industriel ou fournisseur.</h3><p>Vous scellez vos nomenclatures sur votre ordinateur, vous déposez l'empreinte, vous gardez un reçu signé. Plus tard, vous prouvez ce que vous aviez déclaré, et quand.</p></div>
+        <div class="tuile"><h3>Donneur d'ordre.</h3><p>Vous exigez de vos fournisseurs une preuve d'intégrité et de date, que vous contrôlez vous-même, sans accès à leurs données ni confiance accordée à un tiers.</p></div>
+        <div class="tuile"><h3>Auditeur.</h3><p>On vous remet un fichier de preuve et l'empreinte de la clé du fournisseur. Vous les contrôlez dans votre navigateur ou hors ligne.</p></div>
+        <div class="tuile"><h3>Autorité de contrôle.</h3><p>Une autorité à qui une preuve est remise peut la vérifier de la même façon. Diadroma n'a, à ce jour, aucun agrément ni aucune reconnaissance réglementaire.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="parcours" class="alt">
+    <div class="wrap">
+      <h2>Ce que vous faites, concrètement.</h2>
+      <p class="sous-titre">Tout se passe sur votre ordinateur, dans une page locale qui n'écoute que cette machine. Le fichier ne quitte pas votre poste en clair.</p>
+      <ol class="route" aria-label="Le parcours d'un industriel en quatre étapes">
+        <li><h3>Vous choisissez votre fichier.</h3><p>Une nomenclature au format CSV. Elle est lue sur votre poste, rien n'est envoyé à ce stade.</p></li>
+        <li><h3>Vous scellez, puis vous contrôlez.</h3><p>Chiffrement et signature avec vos clés. La page montre exactement ce qui partira : un manifeste lisible, un contenu chiffré illisible.</p></li>
+        <li><h3>Vous déposez et gardez le reçu.</h3><p>Le service renvoie un reçu signé. Vous le conservez : c'est votre trace de ce qui a été accepté.</p></li>
+        <li class="arrivee"><h3>Vous recevez la preuve ancrée.</h3><p>L'ancrage dans Bitcoin prend quelques heures. Pendant le pilote, Diadroma vous remet la preuve, que vous contrôlez avec votre propre clé ; la lecture directe n'est pas encore ouverte.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="principe">
+    <div class="wrap">
+      <h2>Vos données restent chez vous.</h2>
+      <p class="sous-titre">Le chiffrement et la signature se font sur votre poste, avant tout envoi.</p>
+      <div class="tuiles">
+        <div class="tuile"><h3>Vous gardez le clair et les clés.</h3><p>Diadroma ne reçoit que des identifiants, des empreintes, une signature et une enveloppe chiffrée.</p></div>
+        <div class="tuile"><h3>Une date publique.</h3><p>La preuve établit qu'une empreinte signée existait au plus tard à une date, attestée par un registre public indépendant de Diadroma.</p></div>
+        <div class="tuile"><h3>Vérifiable sans nous.</h3><p>Une preuve exportée se contrôle hors ligne, avec un script autonome ou dans votre navigateur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nuit">
+    <div class="wrap">
+      <h2>Aucune clé de récupération.</h2>
+      <p>Diadroma ne détient aucune de vos clés. <strong>Si vous les perdez, vos enveloppes chiffrées deviennent illisibles</strong> ; les preuves d'intégrité restent, elles, vérifiables. C'est une condition essentielle d'usage.</p>
+    </div>
+  </section>
+
+  <section id="limites" class="alt">
+    <div class="wrap">
+      <h2>Ce que Diadroma n'est pas.</h2>
+      <p class="sous-titre">Nous préférons que vous le sachiez avant de nous écrire.</p>
+      <div class="colonnes deux">
+        <div><h3>Pas une garantie de conformité.</h3><p>Une preuve établit qu'une empreinte a été signée par une clé donnée et ancrée à une date. Elle n'établit pas que le contenu est exact : cela reste votre responsabilité.</p></div>
+        <div><h3>Pas encore une valeur légale établie.</h3><p>La date est vérifiable par tous, mais elle n'a pas la présomption d'un horodatage qualifié eIDAS. Un juriste doit confirmer l'effet en droit.</p></div>
+        <div><h3>Divulgation entière, pas ligne par ligne.</h3><p>Montrer le contenu à un auditeur reste votre décision. Aujourd'hui, cela vaut pour la nomenclature entière : il n'existe pas encore de preuve d'une seule ligne.</p></div>
+        <div><h3>Pas de sécurité post-quantique.</h3><p>Les signatures et les échanges de clés utilisés reposent sur des courbes elliptiques. Ils ne résisteraient pas à un ordinateur quantique assez puissant ; ce point n'est pas encore traité.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="niveaux">
+    <div class="wrap">
+      <h2>Une preuve avance étape par étape.</h2>
+      <p class="sous-titre">Le vérificateur indique l'étape atteinte, calculée à partir de la preuve elle-même. Pour la date, nous utilisons OpenTimestamps et la blockchain Bitcoin, simplement parce qu'aucun acteur ne peut la réécrire : aucune cryptomonnaie n'est achetée ni détenue.</p>
+      <ol class="niveaux">
+        <li><strong>Intégrité</strong><span>La signature, le chaînage et l'inclusion dans le lot sont cohérents.</span></li>
+        <li class="attente"><strong>Engagement OpenTimestamps<span class="etat">en attente</span></strong><span>L'empreinte du lot est engagée ; l'attestation Bitcoin peut demander quelques heures.</span></li>
+        <li><strong>Attestation Bitcoin</strong><span>La preuve contient une attestation rattachée à un bloc Bitcoin.</span></li>
+        <li class="ok"><strong>Bloc confirmé<span class="etat">vérifié</span></strong><span>L'attestation correspond à la racine du bloc, lue chez un explorateur ou fournie par l'auditeur.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="passeport" class="alt">
+    <div class="wrap">
+      <h2>Un exemple : le passeport produit numérique.</h2>
+      <p class="sous-titre">Les batteries sont l'un des premiers cas où une nomenclature doit être documentée à l'échelle européenne. Diadroma ne remplace pas votre système de passeport : il ajoute une preuve d'intégrité et de date sur les données qui l'alimentent.</p>
       <dl class="points">
         <div class="point">
           <dt><span class="repere">ESPR</span>Le cadre européen</dt>
@@ -73,43 +144,11 @@
     </div>
   </section>
 
-  <section id="principe" class="alt">
+  <section id="verifier">
     <div class="wrap">
-      <h2>Vos données restent chez vous.</h2>
-      <p class="sous-titre">Le chiffrement et la signature se font sur votre poste, avant tout envoi.</p>
-      <div class="tuiles">
-        <div class="tuile"><h3>Vous gardez le clair et les clés.</h3><p>Diadroma ne reçoit que des identifiants, des empreintes, une signature et une enveloppe chiffrée.</p></div>
-        <div class="tuile"><h3>Une date publique.</h3><p>La preuve établit qu'une empreinte signée existait au plus tard à une date, attestée par un registre public indépendant de Diadroma.</p></div>
-        <div class="tuile"><h3>Vérifiable sans nous.</h3><p>Une preuve exportée se contrôle hors ligne, avec un script autonome ou dans votre navigateur.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="nuit">
-    <div class="wrap">
-      <h2>Aucune clé de récupération.</h2>
-      <p>Diadroma ne détient aucune de vos clés. <strong>Si vous les perdez, vos enveloppes chiffrées deviennent illisibles</strong> ; les preuves d'intégrité restent, elles, vérifiables. C'est une condition essentielle d'usage.</p>
-    </div>
-  </section>
-
-  <section id="niveaux">
-    <div class="wrap">
-      <h2>Une preuve avance étape par étape.</h2>
-      <p class="sous-titre">Le vérificateur indique l'étape atteinte, calculée à partir de la preuve elle-même. Pour la date, nous utilisons OpenTimestamps et la blockchain Bitcoin, simplement parce qu'aucun acteur ne peut la réécrire : aucune cryptomonnaie n'est achetée ni détenue.</p>
-      <ol class="niveaux">
-        <li><strong>Intégrité</strong><span>La signature, le chaînage et l'inclusion dans le lot sont cohérents.</span></li>
-        <li class="attente"><strong>Engagement OpenTimestamps<span class="etat">en attente</span></strong><span>L'empreinte du lot est engagée ; l'attestation Bitcoin peut demander quelques heures.</span></li>
-        <li><strong>Attestation Bitcoin</strong><span>La preuve contient une attestation rattachée à un bloc Bitcoin.</span></li>
-        <li class="ok"><strong>Bloc confirmé<span class="etat">vérifié</span></strong><span>L'attestation correspond à la racine du bloc, lue chez un explorateur ou fournie par l'auditeur.</span></li>
-      </ol>
-    </div>
-  </section>
-
-  <section id="auditeurs" class="alt">
-    <div class="wrap">
-      <h2>Pour les auditeurs.</h2>
+      <h2>Vérifier une preuve.</h2>
       <div class="colonnes">
-        <div><h3>Recevez.</h3><p>Le client vous remet une preuve ancrée (un fichier JSON) et l'empreinte de sa clé de signature, publiée sur un canal qu'il contrôle.</p></div>
+        <div><h3>Recevez.</h3><p>Le fournisseur vous remet une preuve ancrée (un fichier JSON) et l'empreinte de sa clé de signature, publiée sur un canal qu'il contrôle.</p></div>
         <div><h3>Déposez.</h3><p>Dans le <a href="https://verify.diadroma.fr/">vérificateur</a>, tout se calcule dans votre navigateur. La lecture du bloc Bitcoin est optionnelle et signalée.</p></div>
         <div><h3>Lisez.</h3><p>Le résultat indique le niveau atteint, et si la clé de signature est authentifiée.</p></div>
       </div>
@@ -121,8 +160,9 @@
   <section id="pilote" class="centre">
     <div class="wrap">
       <h2>Pilote sur invitation.</h2>
-      <p>Diadroma est en phase pilote, sans engagement de niveau de service. Le service n'a pas encore fait l'objet d'une revue de sécurité indépendante, et les conditions d'usage sont en cours de validation.</p>
-      <p class="contact"><a href="mailto:contact@diadroma.fr">contact@diadroma.fr</a></p>
+      <p>Diadroma est en phase pilote, avec des données synthétiques et sans client réel pour l'instant, sans engagement de niveau de service. Le service n'a pas encore fait l'objet d'une revue de sécurité indépendante, et les conditions d'usage sont en cours de validation.</p>
+      <p>Le projet est porté par Axel Bonneau, à titre individuel. Si votre sujet est la preuve de vos nomenclatures, écrivez-nous : nous cherchons d'abord des retours, pas des ventes. Vingt minutes d'échange suffisent.</p>
+      <p class="contact"><a href="mailto:contact@diadroma.fr?subject=%C3%89change%20sur%20Diadroma">contact@diadroma.fr</a></p>
     </div>
   </section>
 </main>
